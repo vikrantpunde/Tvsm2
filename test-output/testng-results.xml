@@ -1,45 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="1" failed="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="211685" started-at="2019-09-10T11:24:24Z" finished-at="2019-09-10T11:27:56Z">
+  <suite name="Suite" duration-ms="137986" started-at="2019-09-11T07:04:03Z" finished-at="2019-09-11T07:06:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="211685" started-at="2019-09-10T11:24:24Z" finished-at="2019-09-10T11:27:56Z">
-      <class name="com.tvsm2.TestCases.AddVehicleTest">
-        <test-method status="PASS" signature="run()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="run" is-config="true" duration-ms="62137" started-at="2019-09-10T16:54:24Z" finished-at="2019-09-10T16:55:26Z">
+    <test name="Test" duration-ms="137986" started-at="2019-09-11T07:04:03Z" finished-at="2019-09-11T07:06:21Z">
+      <class name="com.tvsm2.TestCases.LoginTest">
+        <test-method status="PASS" signature="initExtent()[pri:0, instance:com.tvsm2.TestCases.LoginTest@50b494a6]" name="initExtent" is-config="true" duration-ms="174" started-at="2019-09-11T12:34:02Z" finished-at="2019-09-11T12:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initExtent -->
+        <test-method status="PASS" signature="run()[pri:0, instance:com.tvsm2.TestCases.LoginTest@50b494a6]" name="run" is-config="true" duration-ms="21692" started-at="2019-09-11T12:34:03Z" finished-at="2019-09-11T12:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="add_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="add_vehicle_test" duration-ms="64637" started-at="2019-09-10T16:55:26Z" finished-at="2019-09-10T16:56:31Z">
+        <test-method status="FAIL" signature="Login_logout_Test()[pri:0, instance:com.tvsm2.TestCases.LoginTest@50b494a6]" name="Login_logout_Test" duration-ms="40689" started-at="2019-09-11T12:34:24Z" finished-at="2019-09-11T12:35:05Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //*[contains(text(),'This is your one-time password- ')] (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[contains(text(),'This is your one-time password- ')] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.tvsm2.utils.Utils.getOTP(Utils.java:40)
+	at com.tvsm2.pages.OTPVerificationPage.enterOTP(OTPVerificationPage.java:43)
+	at com.tvsm2.Base.TestBaseClass.Login(TestBaseClass.java:108)
+	at com.tvsm2.TestCases.LoginTest.Login_logout_Test(LoginTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[contains(text(),'This is your one-time password- ')]'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EEEPC0413', ip: '192.168.147.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_191'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {BROWSER_NAME: Android, VERSION: 8.1.0, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.8.0, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: true, autoWebview: false, desired: {BROWSER_NAME: Android, VERSION: 8.1.0, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, autoGrantPermissions: true, deviceName: Mi A2, platformName: Android}, device.category: PHONE, device.majorVersion: 8, device.manufacture: Xiaomi, device.model: Mi A2, device.name: Mi A2, device.os: Android, device.screenSize: 1080x2160, device.serialNumber: d17ccc49, device.version: 8.1.0, deviceName: Mi A2, deviceUDID: d17ccc49, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 300, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Vikrant Punde\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 09/11/19 12:34 PM, udid: d17ccc49, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: 1e764c18-99f5-4227-b13e-1e94e5cd4d54
+*** Element info: {Using=xpath, value=//*[contains(text(),'This is your one-time password- ')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_logout_Test -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.tvsm2.TestCases.LoginTest@50b494a6]" name="getResult" is-config="true" duration-ms="6075" started-at="2019-09-11T12:35:05Z" finished-at="2019-09-11T12:35:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Login_logout_Test status=FAILURE method=LoginTest.Login_logout_Test()[pri:0, instance:com.tvsm2.TestCases.LoginTest@50b494a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.tvsm2.TestCases.LoginTest -->
+      <class name="com.tvsm2.TestCases.AddVehicleTest">
+        <test-method status="PASS" signature="run()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@1efed156]" name="run" is-config="true" duration-ms="5835" started-at="2019-09-11T12:35:11Z" finished-at="2019-09-11T12:35:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method status="FAIL" signature="add_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@1efed156]" name="add_vehicle_test" duration-ms="39092" started-at="2019-09-11T12:35:17Z" finished-at="2019-09-11T12:35:56Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //*[contains(text(),'This is your one-time password- ')] (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[contains(text(),'This is your one-time password- ')] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.tvsm2.utils.Utils.getOTP(Utils.java:40)
+	at com.tvsm2.pages.OTPVerificationPage.enterOTP(OTPVerificationPage.java:43)
+	at com.tvsm2.Base.TestBaseClass.Login(TestBaseClass.java:108)
+	at com.tvsm2.TestCases.AddVehicleTest.add_vehicle_test(AddVehicleTest.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[contains(text(),'This is your one-time password- ')]'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EEEPC0413', ip: '192.168.147.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_191'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {BROWSER_NAME: Android, VERSION: 8.1.0, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.8.0, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: true, autoWebview: false, desired: {BROWSER_NAME: Android, VERSION: 8.1.0, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, autoGrantPermissions: true, deviceName: Mi A2, platformName: Android}, device.category: PHONE, device.majorVersion: 8, device.manufacture: Xiaomi, device.model: Mi A2, device.name: Mi A2, device.os: Android, device.screenSize: 1080x2160, device.serialNumber: d17ccc49, device.version: 8.1.0, deviceName: Mi A2, deviceUDID: d17ccc49, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 300, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Vikrant Punde\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 09/11/19 12:35 PM, udid: d17ccc49, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: 3f900d99-40d7-4413-b88b-f1e4898c66a5
+*** Element info: {Using=xpath, value=//*[contains(text(),'This is your one-time password- ')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_vehicle_test -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="logout" is-config="true" duration-ms="5376" started-at="2019-09-10T16:56:31Z" finished-at="2019-09-10T16:56:36Z">
+        <test-method status="FAIL" signature="logout()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@1efed156]" name="logout" is-config="true" duration-ms="0" started-at="2019-09-11T12:35:56Z" finished-at="2019-09-11T12:35:56Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //*[@text='Logout'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@text='Logout'] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.tvsm2.Base.TestBaseClass.Logout(TestBaseClass.java:118)
+	at com.tvsm2.TestCases.AddVehicleTest.logout(AddVehicleTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='Logout']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EEEPC0413', ip: '192.168.147.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_191'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {BROWSER_NAME: Android, VERSION: 8.1.0, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.8.0, autoAcceptAlerts: false, autoDismissAlerts: false, autoGrantPermissions: true, autoWebview: false, desired: {BROWSER_NAME: Android, VERSION: 8.1.0, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, autoGrantPermissions: true, deviceName: Mi A2, platformName: Android}, device.category: PHONE, device.majorVersion: 8, device.manufacture: Xiaomi, device.model: Mi A2, device.name: Mi A2, device.os: Android, device.screenSize: 1080x2160, device.serialNumber: d17ccc49, device.version: 8.1.0, deviceName: Mi A2, deviceUDID: d17ccc49, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newSessionWaitTimeout: 300, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Vikrant Punde\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 09/11/19 12:35 PM, udid: d17ccc49, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: 3f900d99-40d7-4413-b88b-f1e4898c66a5
+*** Element info: {Using=xpath, value=//*[@text='Logout']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="quit" is-config="true" duration-ms="3500" started-at="2019-09-10T16:56:36Z" finished-at="2019-09-10T16:56:40Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@1efed156]" name="getResult" is-config="true" duration-ms="3664" started-at="2019-09-11T12:36:17Z" finished-at="2019-09-11T12:36:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=add_vehicle_test status=FAILURE method=AddVehicleTest.add_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@1efed156] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="run()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="run" is-config="true" duration-ms="5807" started-at="2019-09-10T16:56:40Z" finished-at="2019-09-10T16:56:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- run -->
-        <test-method status="PASS" signature="delete_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="delete_vehicle_test" duration-ms="62242" started-at="2019-09-10T16:56:46Z" depends-on-methods="com.tvsm2.TestCases.AddVehicleTest.add_vehicle_test" finished-at="2019-09-10T16:57:48Z">
+        </test-method> <!-- getResult -->
+        <test-method status="SKIP" signature="delete_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@1efed156]" name="delete_vehicle_test" duration-ms="1" started-at="2019-09-11T12:36:21Z" depends-on-methods="com.tvsm2.TestCases.AddVehicleTest.add_vehicle_test" finished-at="2019-09-11T12:36:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete_vehicle_test -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="logout" is-config="true" duration-ms="4564" started-at="2019-09-10T16:57:48Z" finished-at="2019-09-10T16:57:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@5d76b067]" name="quit" is-config="true" duration-ms="3422" started-at="2019-09-10T16:57:53Z" finished-at="2019-09-10T16:57:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
       </class> <!-- com.tvsm2.TestCases.AddVehicleTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
